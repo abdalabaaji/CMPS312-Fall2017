@@ -18,8 +18,8 @@ public class MainActivity extends AppCompatActivity {
     private int onStopCounter = 0;
     private int onCreateCounter = 0;
     private int onReStartCounter = 0;
-    private int onpauseCounter = 0;
-    private int onReSumeCounter = 0;
+    private int onPauseCounter = 0;
+    private int onResumeCounter = 0;
 
     private Button openSecondBtn;
     int counter =0;
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d(TAG, "onPause: " + onpauseCounter++);
+        Log.d(TAG, "onPause: " + onResumeCounter++);
     }
 
     @Override
@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
 
         outState.putInt("onCreate", onCreateCounter);
         outState.putInt("onStop", onStopCounter);
-        outState.putInt("onPause", onpauseCounter);
+        outState.putInt("onPause", onPauseCounter);
 
 
         super.onSaveInstanceState(outState);
